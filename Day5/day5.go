@@ -4,15 +4,20 @@ import (
 	"bufio"
 	"fmt"
 	"os"
+
+	"github.com/Mberga14/Advent_of_code_2020/tree/main/Day5/seatparser"
 )
 
 func main() {
 	seatStrings := parseInput("input.txt")
 
-	for _, seat := range seatStrings {
-		fmt.Println(seat)
-		seatparser.getID
-	}
+	result := seatparser.GetMaxSeatID(seatStrings)
+
+	fmt.Println("Highest seat ID is :", result)
+
+	missingID := seatparser.FindMissingSeatID(seatStrings)
+
+	fmt.Println("Your seat ID is :", missingID)
 
 }
 
