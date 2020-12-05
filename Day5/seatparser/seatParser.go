@@ -14,8 +14,8 @@ func GetSeatID(seatString string) []int {
 
 	columnRune := []rune(column)
 
-	rowNumber := bynarySearch(127, 0, rowRune)
-	columnNumber := bynarySearch(7, 0, columnRune)
+	rowNumber := binarySearch(127, 0, rowRune)
+	columnNumber := binarySearch(7, 0, columnRune)
 
 	return []int{rowNumber, columnNumber} //this will return the row and column
 }
