@@ -1,4 +1,4 @@
-package seatparser
+package day5
 
 import (
 	"math"
@@ -40,7 +40,8 @@ func binarySearch(top int, bottom int, instructions []rune) int {
 }
 
 // GetMaxSeatID : get max ID of seats
-func GetMaxSeatID(seats []string) int {
+func GetMaxSeatID() int {
+	seats := parseInput("input.txt")
 	maxSeatID := math.MinInt32
 	for _, seat := range seats {
 		rowCol := GetSeatID(seat)
@@ -53,7 +54,8 @@ func GetMaxSeatID(seats []string) int {
 }
 
 // FindMissingSeatID : finds the missing seat IDs
-func FindMissingSeatID(seats []string) int {
+func FindMissingSeatID() int {
+	seats := parseInput("input.txt")
 	missingSeatID := 0
 	var IDs []int
 	for _, seat := range seats {

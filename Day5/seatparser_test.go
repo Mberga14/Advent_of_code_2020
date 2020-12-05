@@ -1,10 +1,8 @@
-package main
+package day5
 
 import (
 	"fmt"
 	"testing"
-
-	"github.com/Mberga14/Advent_of_code_2020/tree/main/Day5/seatparser"
 
 	"github.com/stretchr/testify/assert"
 )
@@ -17,7 +15,7 @@ func TestGetSeatID(t *testing.T) {
 
 	testData := "FBFBBFFRLR"
 
-	functionOutput := seatparser.GetSeatID(testData)
+	functionOutput := GetSeatID(testData)
 
 	validResult := []int{44, 5}
 
