@@ -20,7 +20,7 @@ func GetSeatID(seatString string) []int {
 	return []int{rowNumber, columnNumber} //this will return the row and column
 }
 
-func bynarySearch(top int, bottom int, instructions []rune) int {
+func binarySearch(top int, bottom int, instructions []rune) int {
 	//rowValue := 0
 	//calculate row
 	middle := 0
