@@ -21,6 +21,7 @@ func ParseInput(fileName string) [][]string {
 		if scanner.Text() == "" {
 			groups = append(groups, answers)
 			answers = []string{}
+			continue
 		}
 
 		answers = append(answers, scanner.Text())
@@ -32,7 +33,7 @@ func ParseInput(fileName string) [][]string {
 }
 
 // CalculateNumberAnsweredQuestions : calculates ammount of people with same answer in group
-func CalculateNumberAnsweredQuestions(answers []string) int {
+func CalculateNumberAnsweredQuestions(answers []string, limitation string) int {
 
 	if len(answers) == 1 {
 		return len(answers[0])
@@ -50,21 +51,34 @@ func CalculateNumberAnsweredQuestions(answers []string) int {
 		for _, letter := range answerStrings[i] {
 			if _, isPresent := answeredMap[letter]; !isPresent {
 				answeredMap[letter] = answeredMap[letter] + 1
+			} else {
+				answeredMap[letter] = answeredMap[letter] + 1
 			}
 		}
+	}
+
+	if limitation == "Part2" {
+		part2answer := 0
+		for _, value := range answeredMap {
+			if value == len(answers) {
+				part2answer++
+			}
+		}
+
+		return part2answer
 	}
 
 	return len(answeredMap)
 }
 
 // SumOfAnsweredQuestions : sum of CalculateNumberAnsweredQuestions for groups
-func SumOfAnsweredQuestions(fileName string) int {
+func SumOfAnsweredQuestions(fileName string, limitation string) int {
 	groups := ParseInput(fileName)
 
 	counter := 0
 
 	for _, group := range groups {
-		counter += CalculateNumberAnsweredQuestions(group)
+		counter += CalculateNumberAnsweredQuestions(group, limitation)
 	}
 
 	return counter
