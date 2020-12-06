@@ -5,7 +5,8 @@ import (
 	"os"
 )
 
-func parseInput() [][]string {
+// ParseInput : parses Input for day6
+func ParseInput() [][]string {
 	file, err := os.Open("input.txt")
 	if err != nil {
 		panic(err)
