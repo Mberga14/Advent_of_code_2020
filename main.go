@@ -9,5 +9,5 @@ import (
 
 func main() {
 	fmt.Printf("Solution for 5th day:\n\tPart 1: %d\n\tPart 2: %d\n", day5.GetMaxSeatID(), day5.FindMissingSeatID())
-	fmt.Println("Solution for day6 is: ", day6.ParseInput())
+	fmt.Println("Solution for day6\n\tPart 1:", day6.SumOfAnsweredQuestions("Day6\\input.txt"))
 }

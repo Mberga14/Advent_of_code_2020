@@ -41,7 +41,7 @@ func binarySearch(top int, bottom int, instructions []rune) int {
 
 // GetMaxSeatID : get max ID of seats
 func GetMaxSeatID() int {
-	seats := parseInput("input.txt")
+	seats := parseInput("Day5\\input.txt")
 	maxSeatID := math.MinInt32
 	for _, seat := range seats {
 		rowCol := GetSeatID(seat)
@@ -55,7 +55,7 @@ func GetMaxSeatID() int {
 
 // FindMissingSeatID : finds the missing seat IDs
 func FindMissingSeatID() int {
-	seats := parseInput("input.txt")
+	seats := parseInput("Day5\\input.txt")
 	missingSeatID := 0
 	var IDs []int
 	for _, seat := range seats {
