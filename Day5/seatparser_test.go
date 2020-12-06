@@ -26,3 +26,22 @@ func TestGetSeatID(t *testing.T) {
 	assert.Equal(t, validResult, functionOutput, "The two Arrays should be the same.")
 
 }
+
+func TestCalculateSeatID(t *testing.T) {
+	colorReset := "\033[0m"
+	colorGreen := "\033[32m"
+	colorYellow := "\033[33m"
+
+	testData := []int{44, 5}
+
+	functionOutput := CalculateSeatID(testData[0], testData[1])
+
+	validResult := 357
+
+	fmt.Println(string(colorYellow), "Function output:", functionOutput)
+	fmt.Println(string(colorGreen), "Valid output:   ", validResult)
+	fmt.Println(string(colorReset), "")
+
+	assert.Equal(t, validResult, functionOutput, "The two numbers should be the same.")
+
+}
