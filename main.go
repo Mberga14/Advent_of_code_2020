@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 
+	day10 "github.com/Mberga14/Advent_of_code_2020/Day10"
 	day5 "github.com/Mberga14/Advent_of_code_2020/Day5"
 	day6 "github.com/Mberga14/Advent_of_code_2020/Day6"
 	day7 "github.com/Mberga14/Advent_of_code_2020/Day7"
@@ -22,4 +23,6 @@ func main() {
 	day9Part1, _ := day9.GetRougeNumber("Day9\\input_test.txt", 5)
 	fmt.Println("Solution for day9\n\tPart 1:", day9Part1)
 	fmt.Println("\tPart 2:", day9.EncryptionWeakness("Day9\\input.txt", 25))
+	fmt.Println("Solution for day10\n\tPart 1:", day10.CalCulateJoltDifference("Day10\\input_test.txt"))
+	fmt.Println("\tPart 2:", day10.CalculateAdapterPossibilities("Day10\\input.txt"))
 }
