@@ -7,6 +7,7 @@ import (
 	day11 "github.com/Mberga14/Advent_of_code_2020/Day11"
 	day12 "github.com/Mberga14/Advent_of_code_2020/Day12"
 	day13 "github.com/Mberga14/Advent_of_code_2020/Day13"
+	day14 "github.com/Mberga14/Advent_of_code_2020/Day14"
 	day5 "github.com/Mberga14/Advent_of_code_2020/Day5"
 	day6 "github.com/Mberga14/Advent_of_code_2020/Day6"
 	day7 "github.com/Mberga14/Advent_of_code_2020/Day7"
@@ -33,5 +34,8 @@ func main() {
 	fmt.Println("Solution for day12\n\tPart 1:", day12.CalculateDistance("Day12\\input.txt"))
 	fmt.Println("\tPart 2:", day12.CalculateDistanceWaypoint("Day12\\input.txt"))
 	fmt.Println("Solution for day13\n\tPart 1:", day13.FindEarliestBus("Day13\\input.txt"))
-	//fmt.Println("\tPart 2:", day13.CalculateInterval("Day13\\input_test_2.txt"))
+	fmt.Println("\tPart 2:", day13.CalculateInterval("Day13\\input_test_2.txt"))
+	fmt.Println("Solution for day14\n\tPart 1:", day14.CalculateMemoryValues("Day14\\input.txt"))
+	fmt.Println("\tPart 2:", day14.CalculateMemoryValuesP2("Day14\\input.txt"))
+
 }
